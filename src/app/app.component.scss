@@ -2,18 +2,27 @@
   background: url("https://scramblerducati.com/img/home/slider/desert-sled-2.jpg")no-repeat center center;
   background-size: cover;
 }
+
 .navbar {
   background-color: transparent;
 }
+
 .top-nav-collapse {
   background-color: #4285F4;
 }
+
 @media only screen and (max-width: 768px) {
   .navbar {
-      background-color: #4285F4;
+    background-color: #4285F4;
   }
 }
 
 .medium-card {
   width: 50%;
+}
+
+.card-image {
+  max-width: 800px;
+  opacity: 0.9;
+  background-image: url('https://images.contentful.com/28uk7b0wvnz9/3SMXP5d3figAcyOQcCSW0i/d07a671c2b6efd4e0ab0a584f20e1417/Hyper-939SP-MY18-Special-Livery-01-Hero-Banner-1600X1000.jpg');
 }
