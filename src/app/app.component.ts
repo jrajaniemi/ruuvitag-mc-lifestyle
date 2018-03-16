@@ -7,14 +7,10 @@ import {
   ActivatedRoute,
   Params
 } from '@angular/router';
-<<<<<<< HEAD
-=======
-import { decode } from 'punycode';
 
 // https://github.com/Equim-chan/base91
 
 import * as base91 from 'base91';
->>>>>>> 24d81d659e05a3d93304a3056f0b52213c20d219
 
 @Component({
   selector: 'app-root',
