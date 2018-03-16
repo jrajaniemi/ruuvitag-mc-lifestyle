@@ -7,6 +7,14 @@ import {
   ActivatedRoute,
   Params
 } from '@angular/router';
+<<<<<<< HEAD
+=======
+import { decode } from 'punycode';
+
+// https://github.com/Equim-chan/base91
+
+import * as base91 from 'base91';
+>>>>>>> 24d81d659e05a3d93304a3056f0b52213c20d219
 
 @Component({
   selector: 'app-root',
@@ -14,13 +22,25 @@ import {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Scrambler Weather Station';
 
+  title = 'Scrambler Weather Station';
+  temp = 0.0;
+  humidity = 0;
+  air_pressure = 0;
   constructor(private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.title = this.route.snapshot.queryParams[""];
+    this.route.fragment.subscribe((hash: string) => {
+      if (hash.length === 9) {
+        console.log('fragment = ' + hash + '; length = ' + hash.length);
+        let decoded = base91.decode(hash);
+        console.log('91: ' + decoded);
+        this.temp = Number(atob(hash).substr(0, 2));
+        this.humidity = Number(atob(hash).substr(2, 2));
+        this.air_pressure = Number(atob(hash).substr(4));
+      }
+    });
   }
 }

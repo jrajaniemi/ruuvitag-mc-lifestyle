@@ -23,6 +23,7 @@
     "@angular/router": "^5.1.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.1",
     "angular-bootstrap-md": "latest",
+    "base91": "0.0.5",
     "chart.js": "^2.5.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
