@@ -13,6 +13,9 @@
           <li class="nav-item waves-light" mdbRippleRadius>
             <span class="lead"> {{ air_pressure }} hPa</span> <span class="lead lead-light d-lg-none">Air Pressure</span>
           </li>
+          <li *ngIf="BID">
+            <span class="lead"> {{ BID }}</span> <span class="lead lead-light d-lg-none">Device ID</span>
+          </li>
       </ul>
       <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item waves-light" mdbRippleRadius>
