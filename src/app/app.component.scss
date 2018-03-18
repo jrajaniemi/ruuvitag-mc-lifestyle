@@ -1,6 +1,7 @@
 .view {
-  background: url("../assets/scramblerducati-yxpihlaja.jpg")no-repeat center center;
+  background: url("../assets/scr.jpg")no-repeat center center;
   background-size: cover;
+  min-height: 800px;
 }
 
 .navbar {
@@ -22,7 +23,53 @@
 }
 
 .card-image {
-  max-width: 800px;
-  opacity: 0.9;
-  background-image: url('https://images.contentful.com/28uk7b0wvnz9/3SMXP5d3figAcyOQcCSW0i/d07a671c2b6efd4e0ab0a584f20e1417/Hyper-939SP-MY18-Special-Livery-01-Hero-Banner-1600X1000.jpg');
+  max-width: 645px;
+  opacity: 0.95;
+  background-image: url('../assets/garage.jpg');
+}
+
+.h1-responsive {
+  text-shadow: 2px 2px #666;
+}
+
+.lead {
+  color: white;
+}
+
+.lead-light {
+  color: white;
+  font-weight: 100;
+}
+
+.big {
+  height: 1rem;
+  width: 1rem;
+  font-weight: 600;
+}
+
+.fill-yellow {
+  color: #eadb4d;
+}
+
+.fill-green {
+  fill: green;
+  fill-opacity: .5;
+}
+
+.table {
+  margin-top: 4rem;
+  background-color: #aad7ec;
+  opacity: 0.85;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.bg-ducati {
+  background-color: #fed030;
+}
+
+.btn-rounded {
+  border-radius: 40px;
 }

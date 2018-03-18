@@ -40,27 +40,27 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.route.fragment.subscribe((hash: string) => {
       if (hash) {
-        console.log('Hash: ' + hash + ' Hash Length: ' + hash.length);
+        // console.log('Hash: ' + hash + ' Hash Length: ' + hash.length);
         if (hash.length === 8) {
-          console.log('fragment = ' + hash + '; length = ' + hash.length);
+          // console.log('fragment = ' + hash + '; length = ' + hash.length);
           var decoded91 = base91.decode(hash);
           var decoded64 = base64ToUint8Array(hash);
-          console.log('91: ' + decoded91);
-          console.log('64: ' + decoded64);
+          // console.log('91: ' + decoded91);
+          // console.log('64: ' + decoded64);
           let format = decoded64[0];
 
           if (format !== 2 && format !== 4) {
-            this.humidity = decoded91[1] * 0.5;
-            const uTemp = (((decoded91[3] & 127) << 7) | decoded91[2]);
+            this.humidity = Math.round(decoded91[1] * 0.5);
+            const uTemp = (((decoded91[3] & 127) << 8) | decoded91[2]);
             const tempSign = (decoded91[3] >> 7) & 1;
-            this.temp = tempSign === 0 ? uTemp / 256.0 : -1 * uTemp / 256.0;
-            this.air_pressure = ((decoded91[5] << 8) + decoded91[4]) + 5000;
+            this.temp = tempSign === 0 ? Math.round(uTemp / 256.0) : Math.round(-1 * uTemp / 256.0);
+            this.air_pressure = Math.round((((decoded91[5] << 8) + decoded91[4]) + 50000)/100);
           } else {
-            this.humidity = decoded64[1] * 0.5;
+            this.humidity = Math.round(decoded64[1] * 0.5);
             const uTemp = (((decoded64[2] & 127) << 8) | decoded64[3]);
             const tempSign = (decoded64[2] >> 7) & 1;
-            this.temp = tempSign === 0 ? uTemp / 256.0 : -1 * uTemp / 256.0;
-            this.air_pressure = ((decoded64[4] << 8) + decoded64[5]) + 50000;
+            this.temp = tempSign === 0 ? Math.round(uTemp / 256.0) : Math.round(-1 * uTemp / 256.0);
+            this.air_pressure = Math.round((((decoded64[5] << 8) + decoded64[4]) + 50000)/100);
             if (hash[0] == 'B') {
               this.BID = hash.charCodeAt(8);
             }

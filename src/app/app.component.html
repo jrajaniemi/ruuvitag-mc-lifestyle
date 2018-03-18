@@ -1,80 +1,36 @@
-<header>
-    <!-- Main -->
-    <div class="view intro " style="">
-        <div class="full-bg-img flex-center">
-            <div class="container text-center white-text wow fadeInUp">
-                <div class="row text-center">
-                    <div class="col-sm-12 text-center">
-                        <img clas="mx-auto d-block img-fluid float-center" src="https://scramblerducati.com/immagini/Scrambler_Ducati.png" style="max-width:600px">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card card-image m-5 mx-auto">
-
-                            <!-- Content -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-1">
-                                        <i class="fa fa-sun-o fa-2x float-center"></i>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <p class="h1-responsive">
-                                            {{ temp }} <small><sup>&deg;C</sup></small>
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <p class="h1-responsive">TEMPERATURE</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-1">
-                                        <i class="fa fa-tint fa-2x float-center"></i>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <p class="h1-responsive">
-                                            {{ humidity }} <small>%</small>
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <p class="h1-responsive">HUMIDITY</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-1">
-                                        <i class="fa fa-sun-o fa-2x float-center"></i>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <p class="h1-responsive">
-                                            {{ air_pressure }} <small>hPa</small>
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <p class="h1-responsive">AIR PRESSURE</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-1">
-                                        <i class="fa fa-sun-o fa-2x float-center"></i>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <p class="h1-responsive">
-                                            {{ BID }} <small>hPa</small>
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <p class="h1-responsive">AIR PRESSURE</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Content -->
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-amber scrolling-navbar ie-nav" [containerInside]="false">
+  <logo>
+      <a class="logo navbar-brand" href="#"><span>Scrambler Ducati Weather Station</span></a>
+  </logo>
+  <links>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active waves-light" mdbRippleRadius>
+            <span class="lead"> {{ temp }} <sup>&deg;</sup>C </span> <span class="lead lead-light d-lg-none">Temperature</span>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+            <span class="lead"> {{ humidity }} %</span> <span class="lead lead-light d-lg-none">Humidity</span>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+            <span class="lead"> {{ air_pressure }} hPa</span> <span class="lead lead-light d-lg-none">Air Pressure</span>
+          </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" href="https://www.mc-lifestyle.com"><i-home></i-home></a>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" href="https://www.facebook.com/MCL.Web"><i-facebook></i-facebook></a>
+          </li>
+          <li class="nav-item waves-light" mdbRippleRadius>
+              <a class="nav-link" href="https://www.instagram.com/mclifestyle_kokkola/"><i-instagram></i-instagram></a>
+          </li>
+      </ul>
+  </links>
+</mdb-navbar>
+<div class="container-fluid view">
+  <div class="row mt-5">
+    <div class="col-sm-12 text-center fixed-bottom mb-3">
+      <a type="button" class="btn btn-danger btn-rounded btn-lg" href="https://www.mc-lifestyle.com">MC Lifestyle</a>
     </div>
-    <!-- /.Main -->
-</header>
+  </div>
+</div>

@@ -26,6 +26,7 @@
         "scripts": [
             "../node_modules/chart.js/dist/Chart.js",
             "../node_modules/hammerjs/hammer.min.js",
+            "../node_modules/feather-icons/dist/feather.min.js",
             "./assets/base91.js",
             "./assets/base64.js"
         ],

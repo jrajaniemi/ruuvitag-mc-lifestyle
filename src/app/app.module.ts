@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { IconsModule } from './icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    IconsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
