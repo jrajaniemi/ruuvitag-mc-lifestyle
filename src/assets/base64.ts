@@ -1,3 +1,4 @@
+
 export function base64_decode (s:string):any {
   /*
   let hasNode = (typeof process !== 'undefined' && process.versions && process.versions.node), hasTypedArray = (typeof Uint8Array !== 'undefined');
